@@ -15,62 +15,34 @@ import java.util.Scanner;
 public class EX17LojaDeTintasParteDois {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double coberturaEmMetrosQuadradosParaUmLitroDeTinta = 6;
-        double quantidadeDeLitrosEmUmaLata = 18;
-        double precoDaLataDeTinta = 80;
-        double quantidadeDeLitrosEmUmGalao = 3.6;
-        double precoDoGalaoDeTinta = 25;
-        double media = 2;
-        double folga = 10;
-        double totalDaPorcentagem = 100;
+        double cobertura_em_metros_de_um_litro_de_tinta = 6;
+        double quantidade_de_litros_na_lata = 18;
+        double preco_da_lata_de_tinta = 80;
+        double rendimento_da_lata = cobertura_em_metros_de_um_litro_de_tinta * quantidade_de_litros_na_lata;
+        double quantidade_de_litros_no_galao = 3.6;
+        double preco_do_galao_de_tinta = 25;
+        double rendimento_do_galao = cobertura_em_metros_de_um_litro_de_tinta * quantidade_de_litros_no_galao;
 
         System.out.print("Tamanho da área a ser decorada (m²): ");
         Double area = scanner.nextDouble();
         System.out.println(" ");
 
-        Double quantidadeLitrosDeTinta = obterQuantidadeLitrosDeTinta(area, coberturaEmMetrosQuadradosParaUmLitroDeTinta);
-        Double quantidadeLatasDeTinta18Litros = obterQuantidadeLatasDeTinta18Litros(quantidadeLitrosDeTinta, quantidadeDeLitrosEmUmaLata);
-        Double precoTotalLataDeTinta18Litros = obterPrecoTotalLataDeTinta18Litros(quantidadeLatasDeTinta18Litros, precoDaLataDeTinta);
+        Double quantidade_de_latas = Math.ceil(area/rendimento_da_lata);
+        Double preco_total_latas = quantidade_de_latas * preco_da_lata_de_tinta;
+        Double quantidade_de_galoes = Math.ceil(area/rendimento_do_galao);
+        Double preco_total_galoes = quantidade_de_galoes * preco_do_galao_de_tinta;
 
-        Double quantidadeGalaoDeTinta3LitrosE600ML = obterQuantidadeGalaoDeTinta3LitrosE600ML(quantidadeLitrosDeTinta, quantidadeDeLitrosEmUmGalao);
-        Double precoTotalGalaoDeTinta3LitrosE600ML = obterPrecoTotalGalaoDeTinta3LitrosE600ML(quantidadeGalaoDeTinta3LitrosE600ML, precoDoGalaoDeTinta);
+        Double latas_gastas = Math.floor(area / rendimento_da_lata);
+        Double galoes_gastos = Math.floor(area / rendimento_do_galao);
+        Double misturados = (latas_gastas * preco_da_lata_de_tinta) + (galoes_gastos * preco_do_galao_de_tinta);
+        Double misturados_com_folga = misturados - (misturados * 10) / 100;
 
-        Double precoTotalGalaoELata = obterPrecoTotalGalaoELata(precoTotalLataDeTinta18Litros, precoTotalGalaoDeTinta3LitrosE600ML, media);
-        Double precoTotalGalaoELataComFolga = obterPrecoTotalGalaoELataComFolga(precoTotalGalaoELata, folga, totalDaPorcentagem);
-
-        System.out.println("Latas de tinta de 18 litros a serem compradas: " + quantidadeLatasDeTinta18Litros);
-        System.out.println("Preço total com latas de 18 litros: " + precoTotalLataDeTinta18Litros);
-        System.out.println("Galão de tinta de 3,6 litros a serem compradas: " + quantidadeGalaoDeTinta3LitrosE600ML);
-        System.out.println("Preço total com galões de 3,6 litros: " + precoTotalGalaoDeTinta3LitrosE600ML);
-        System.out.println("Preço misturado e com 10% de folga: " + precoTotalGalaoELataComFolga);
+        System.out.println("Latas de tinta de 18 litros a serem compradas: " + quantidade_de_latas);
+        System.out.println("Preço total com latas de 18 litros: " + preco_total_latas);
+        System.out.println("Galão de tinta de 3,6 litros a serem compradas: " + quantidade_de_galoes);
+        System.out.println("Preço total com galões de 3,6 litros: " + preco_total_galoes);
+        System.out.println("Latas gastas: " + latas_gastas + " / Galões gastos: " + galoes_gastos);
+        System.out.println("Preço misturado e com 10% de folga: " + misturados_com_folga);
         scanner.close();
-    }
-
-    private static double obterQuantidadeLitrosDeTinta(Double area, Double coberturaEmMetrosQuadradosParaUmLitroDeTinta) {
-        return Math.ceil(area / coberturaEmMetrosQuadradosParaUmLitroDeTinta);
-    }
-
-    private static double obterQuantidadeLatasDeTinta18Litros(Double quantidadeLitrosDeTinta, Double quantidadeDeLitrosEmUmaLata) {
-        return Math.ceil(quantidadeLitrosDeTinta / quantidadeDeLitrosEmUmaLata);
-    }
-
-    private static double obterPrecoTotalLataDeTinta18Litros(Double precoTotalLatasDeTinta, Double precoDaLataDeTinta) {
-        return Math.ceil(precoTotalLatasDeTinta * precoDaLataDeTinta);
-    }
-
-    private static double obterQuantidadeGalaoDeTinta3LitrosE600ML(Double quantidadeLitrosDeTinta, Double quantidadeDeLitrosEmUmGalao) {
-        return Math.ceil(quantidadeLitrosDeTinta / quantidadeDeLitrosEmUmGalao);
-    }
-
-    private static double obterPrecoTotalGalaoDeTinta3LitrosE600ML(Double precoGalaoDeTinta3LitrosE600ML, Double precoDoGalaoDeTinta) {
-        return Math.ceil(precoGalaoDeTinta3LitrosE600ML * precoDoGalaoDeTinta);
-    }
-
-    private static double obterPrecoTotalGalaoELata(Double precoTotalLataDeTinta18Litros, Double precoTotalGalaoDeTinta3LitrosE600ML, Double media) {
-        return Math.ceil((precoTotalLataDeTinta18Litros + precoTotalGalaoDeTinta3LitrosE600ML) / media);
-    }
-
-    private static double obterPrecoTotalGalaoELataComFolga(Double precoGalaoELata, Double folga, Double totalDaPorcentagem) {
-        return Math.ceil(precoGalaoELata - (precoGalaoELata * folga) / totalDaPorcentagem);
     }
 }
