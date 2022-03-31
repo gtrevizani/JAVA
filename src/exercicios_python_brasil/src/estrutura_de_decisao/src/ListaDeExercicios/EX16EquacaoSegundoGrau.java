@@ -12,7 +12,7 @@ Se o delta calculado for negativo, a equação não possui raizes reais. Informe
 Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
 Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
  */
-public class EX16 {
+public class EX16EquacaoSegundoGrau {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
