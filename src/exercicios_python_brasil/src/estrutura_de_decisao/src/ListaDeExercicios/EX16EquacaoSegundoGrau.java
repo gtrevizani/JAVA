@@ -40,7 +40,7 @@ public class EX16EquacaoSegundoGrau {
                 Double raizUm = (-b + (elevacao)) / (2 * a);
                 Double raizDois = (-b - (elevacao)) / (2 * a);
                 System.out.println("Raiz 1: " + raizUm);
-                System.out.println("Raiz 2: " + raizDois);
+                System.out.println("Raizz 2: " + raizDois);
             }
         }
     }
