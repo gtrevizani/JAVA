@@ -6,6 +6,7 @@ public class Atividade_28 {
     static final byte TRES = 3;
     static final byte CINCO = 5;
     static final byte CEM = 100;
+    static final double CINCO_PORCENTO_DE_DESCONTO = 0.05;
     static final double PRECO_DO_FILE_DUPLO = 4.90;
     static final double PRECO_DO_FILE_DUPLO_ABAIXO_DE_CINCO = 5.80;
     static final double PRECO_DA_ALCATRA = 5.90;
@@ -17,14 +18,16 @@ public class Atividade_28 {
 
         System.out.print("(1) file duplo\n(2) alcatra\n(3)picanha\nEscolha sua carne: ");
         byte escolhaDaCarne = scanner.nextByte();
-        System.out.print("Digite a quantidade desejada(Kg   ): ");
+        System.out.print("Digite a quantidade desejada(Kg): ");
         int quantidadeDeCarne = scanner.nextInt();
         System.out.print("A compra sera feita via cartao tabajara (1)sim (2)nao: ");
         byte decisaoDeCompraViaCartao = scanner.nextByte();
 
+        double descontoDeCincoPorcento = 0;
         double precoDaCarne = 0;
         double precoTotalDaCarne = 0;
-        String decisaoDeCarne;
+        String decisaoDeCarne = null;
+        String cartaoTabajara = null;
 
         if(escolhaDaCarne == UM) {
             decisaoDeCarne = "file duplo";
@@ -47,20 +50,22 @@ public class Atividade_28 {
             } else {
                 precoDaCarne = quantidadeDeCarne * PRECO_DA_PICANHA_MENOR_QUE_CINCO;
             }
-        } if (precoDaCarne == UM) {
-            double descontoDeCincoPorcento = ((precoDaCarne - CINCO) / CEM);
+        } if (decisaoDeCompraViaCartao == UM) {
+            cartaoTabajara = "Sim";
+            descontoDeCincoPorcento = (precoDaCarne * CINCO_PORCENTO_DE_DESCONTO);
             precoTotalDaCarne = precoDaCarne - descontoDeCincoPorcento;
         } else {
+            cartaoTabajara = "Não";
             precoTotalDaCarne = precoDaCarne;
         }
 
-        System.out.print("**********CUPOM FISCAL**********\n");
-        System.out.print("Carne..........." + decisaoDeCarne);
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
+        System.out.print("\n**********CUPOM FISCAL**********\n");
+        System.out.print("Carne: " + decisaoDeCarne);
+        System.out.print("\nQuantidade (Kg): " + quantidadeDeCarne + " Kg");
+        System.out.print("\nPreço: R$ " + precoTotalDaCarne);
+        System.out.print("\nCartao Tabajara: " + cartaoTabajara);
+        System.out.print("\nDesconto: " + descontoDeCincoPorcento);
+        System.out.print("\n********************************");
         scanner.close();
     }
 } //incompleto
