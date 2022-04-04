@@ -12,59 +12,38 @@ Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesm
  */
 public class EX18DataValidaOuNao {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(in);
+       Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Informe a dia (dd): ");
-        int dia = scanner.nextInt();
-        System.out.print("Informe o mes (m): ");
-        int mes = scanner.nextInt();
-        System.out.print("Informe o ano (yyyy): ");
-        int ano = scanner.nextInt();
+        System.out.print("digite um dia: ");
+        Byte dia = scanner.nextByte();
+        System.out.print("digite um mês: ");
+        Byte mes = scanner.nextByte();
+        System.out.print("digite um ano: ");
+        Integer ano = scanner.nextInt();
 
-        int mesCorreto = mes - 1;
-        Calendar c = Calendar.getInstance();
-        c.set(ano, mesCorreto, dia);
-        Date periodo = c.getTime();
+        String dataValida = null;
 
-        if(ano<0){
-            System.out.println("Ano inválido.");
-        } else if (mes<1 || mes>12) {
-                System.out.println("Mês inválido");
-
-        } else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
-            if (dia > 0 && dia <32){
-                System.out.println("Data válida.");
-            } else {
-                System.out.println("Data inválida.");
+        if(mes==1 || mes==3 || mes==5 || mes==7 ||mes==8 || mes==10 || mes==12) {
+            if(dia <= 31) {
+                dataValida = "valida";
             }
-        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
-            if (dia >0 && dia<31){
-                System.out.println("Data válida.");
-            } else {
-                System.out.println("Data inválida.");
+        } else if (mes==4 || mes==6 || mes==9 | mes==11) {
+            if(dia <=30) {
+                dataValida = "Valida";
             }
-        } else {
-            if (ano % 4 == 0){
-                if ( dia > 0 && dia < 30){
-                    System.out.println("Data válida.");
-                } else {
-                    System.out.println("Data inválida.");
+            } else if (mes==2) {
+            if(ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0) {
+                if(dia<=29) {
+                    dataValida = "Valida";
+                } else if (dia<=28) {
+                    dataValida = "Valida";
                 }
+            } if (dataValida == "Valida") {
+                System.out.print("A data inserida é válida");
             } else {
-                if(dia > 0 && dia <29){
-                    System.out.println("Data válida.");
-                } else {
-                    System.out.println("Data inválida.");
-                }
+                System.out.print("A data inserida não é válida");
             }
         }
-
-
-
-        //Formata a dia
-        DateFormat formataData = DateFormat.getDateInstance();
-        System.out.println("Data atual com formatação: "+ formataData.format(periodo));
-
-
+        scanner.close();
     }
 }
