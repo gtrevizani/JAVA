@@ -13,7 +13,7 @@ public class EX02ValorPositivoOuNegativo {
         if(valor>=0){
             System.out.println("O valor " + valor + " é positivo.");
         }
-        else if(valor<0) {
+        else {
             System.out.println("O valor " + valor + " é negativo.");
         }
         scanner.close();

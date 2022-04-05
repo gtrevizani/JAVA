@@ -1,6 +1,8 @@
+package estrutura_de_decisao.src.ListaDeExercicios;
+
 import java.util.Scanner;
 
-public class Atividade_24 {
+public class EX24k {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

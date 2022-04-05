@@ -1,6 +1,8 @@
+package estrutura_de_decisao.src.ListaDeExercicios;
+
 import java.util.Scanner;
 
-public class Atividade_26 {
+public class EX26k {
     static final double PRECO_DA_GASOLINA = 2.50;
     static final double PRECO_DO_ALCOOL = 1.90;
     static final double DESCONTO_DE_TRES_PORCENTO = 0.3;

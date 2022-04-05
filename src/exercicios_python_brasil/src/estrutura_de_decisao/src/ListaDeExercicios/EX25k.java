@@ -1,6 +1,8 @@
+package estrutura_de_decisao.src.ListaDeExercicios;
+
 import java.util.Scanner;
 
-public class Atividade_25 {
+public class EX25k {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,9 +21,9 @@ public class Atividade_25 {
 
         int taxaDeRespostas = 0; //cada resposta positiva deve ser consirada +1
 
-        if(telefonouParaVitima == 's') {
+        if (telefonouParaVitima == 's') {
             taxaDeRespostas = taxaDeRespostas + 1;
-            if(esteveNoLocalDoCrime == 's') {
+            if (esteveNoLocalDoCrime == 's') {
                 taxaDeRespostas = taxaDeRespostas + 1;
                 if (moraPertoDaVitima == 's') {
                     taxaDeRespostas = taxaDeRespostas + 1;
@@ -33,16 +35,18 @@ public class Atividade_25 {
                     }
                 }
             }
-        } if(taxaDeRespostas == 5) {
+        }
+        if (taxaDeRespostas == 5) {
             System.out.print("Você é o assasino!");
         } else if (taxaDeRespostas == 2) {
             System.out.print("Você é um possível suspeito!");
         } else if (taxaDeRespostas == 3 || taxaDeRespostas == 4) {
             System.out.print("Você é cumplice do assasinato!");
-        } else if(taxaDeRespostas == 1) {
+        } else if (taxaDeRespostas == 1) {
             System.out.print("Você esta liberado, inocente.");
         } else {
             System.out.print("insira valores validos.");
         }
         scanner.close();
     }
+}

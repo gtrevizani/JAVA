@@ -1,6 +1,8 @@
+package estrutura_de_decisao.src.ListaDeExercicios;
+
 import java.util.Scanner;
 
-public class Atividade_28 {
+public class EX28k {
     static final byte UM = 1;
     static final byte DOIS = 2;
     static final byte TRES = 3;
@@ -68,4 +70,4 @@ public class Atividade_28 {
         System.out.print("\n********************************");
         scanner.close();
     }
-} //incompleto
+}

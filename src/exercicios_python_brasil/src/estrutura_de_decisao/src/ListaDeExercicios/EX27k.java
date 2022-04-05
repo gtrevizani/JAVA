@@ -1,6 +1,8 @@
+package estrutura_de_decisao.src.ListaDeExercicios;
+
 import java.util.Scanner;
 
-public class Atividade_27 {
+public class EX27k {
     static final double CINCO = 5;
     static final double OITO = 8;
     static final double VINTE_E_CINCO = 25;
