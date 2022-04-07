@@ -15,22 +15,23 @@ public class EX20Media {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Informe a primeira nota: ");
-        Double notaUm = scanner.nextDouble();
+        double notaUm = scanner.nextDouble();
         System.out.print("Informe a segunda nota: ");
-        Double notaDois = scanner.nextDouble();
+        double notaDois = scanner.nextDouble();
         System.out.print("Informe a terceira nota: ");
-        Double notaTres = scanner.nextDouble();
+        double notaTres = scanner.nextDouble();
 
         double media = (notaUm + notaDois + notaTres) / 3;
 
-        boolean maiorQueSete = media >= 7 && media<10;
-        boolean menorQueSete = media <7;
+        boolean maiorQueSete = media >= 7 && media < 10;
+        boolean menorQueSete = media < 7;
         boolean notaMaxima = media == 10;
-
-        if(maiorQueSete){
+        if (notaUm < 0 || notaUm > 10 || notaDois < 0 || notaDois > 10 || notaTres < 0 || notaTres > 10) {
+            System.out.println("Nota(s) inválida(s).");
+        } else if (maiorQueSete) {
             System.out.println("Media: " + media);
             System.out.println("Aprovado.");
-        } else if (menorQueSete){
+        } else if (menorQueSete) {
             System.out.println("Media: " + media);
             System.out.println("Reprovado.");
         } else if (notaMaxima) {

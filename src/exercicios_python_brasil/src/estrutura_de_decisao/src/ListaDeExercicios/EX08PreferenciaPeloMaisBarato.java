@@ -9,24 +9,28 @@ sabendo que a decisão é sempre pelo mais barato.
 public class EX08PreferenciaPeloMaisBarato {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int opcoesDeProdutos = 3;
-        int precoDosProdutos[] = new int[opcoesDeProdutos];
+        int opcoesDeProdutos = 4;
+        int[] precoDosProdutos = new int[opcoesDeProdutos];
 
-
-        for (int contador = 0; contador <3; contador++){
-            System.out.print("Insira o preco do " + contador +"° produto: ");
-            precoDosProdutos[contador] = scanner.nextInt();
+        for (int c = 1; c < 4; c++) {
+            System.out.print("Insira o preco do " + c + "° produto: ");
+            precoDosProdutos[c] = scanner.nextInt();
+            while (precoDosProdutos[c] < 0) {
+                System.out.println("Valor inválido.");
+                System.out.print("Insira o preco do " + c + "° produto: ");
+                precoDosProdutos[c] = scanner.nextInt();
+            }
         }
 
-        int menorPreco = precoDosProdutos[0];
-        for (int contador = 0; contador <3; contador++){
-            if(menorPreco > precoDosProdutos[contador]){
-                menorPreco = precoDosProdutos[contador];
+        int menorPreco = precoDosProdutos[1];
+
+        for (int c = 1; c < 4; c++) {
+            if (menorPreco > precoDosProdutos[c]) {
+                menorPreco = precoDosProdutos[c];
             }
         }
         System.out.println(" ");
-        System.out.println("A melhor escolha e o produto que custa R$" + menorPreco + " reais");
-
+        System.out.println("O produto mais em conta custa R$" + menorPreco + " reais");
         scanner.close();
     }
 }

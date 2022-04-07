@@ -24,35 +24,34 @@ public class EX11ReajusteSalarial {
         System.out.print("Informe o seu salario: ");
         double salarioInicial = scanner.nextDouble();
 
-        if (salarioInicial <= 279){
-            double valorDoReajuste = (salarioInicial * 20)/100;
+        if (salarioInicial < 0) {
+            System.out.println("Salário inválido.");
+        } else if (salarioInicial <= 279) {
+            double valorDoReajuste = (salarioInicial * 20) / 100;
             double salarioComReajuste = salarioInicial + valorDoReajuste;
 
             System.out.println("Salario antes do reajuste: " + salarioInicial);
             System.out.println("Percentual de aumento aplicado: 20%");
             System.out.println("O valor do aumento: " + valorDoReajuste);
             System.out.println("Salario com reajuste: " + salarioComReajuste);
-        }
-        else if (salarioInicial >= 280 && salarioInicial <= 699){
-            double valorDoReajuste = (salarioInicial * 15)/100;
+        } else if (salarioInicial >= 280 && salarioInicial <= 699) {
+            double valorDoReajuste = (salarioInicial * 15) / 100;
             double salarioComReajuste = salarioInicial + valorDoReajuste;
 
             System.out.println("Salario antes do reajuste: " + salarioInicial);
             System.out.println("Percentual de aumento aplicado: 15%");
             System.out.println("O valor do aumento: " + valorDoReajuste);
             System.out.println("Salario com reajuste: " + salarioComReajuste);
-        }
-        else if (salarioInicial >= 700 && salarioInicial <= 1499){
-            double valorDoReajuste = (salarioInicial * 10)/100;
+        } else if (salarioInicial >= 700 && salarioInicial <= 1499) {
+            double valorDoReajuste = (salarioInicial * 10) / 100;
             double salarioComReajuste = salarioInicial + valorDoReajuste;
 
             System.out.println("Salario antes do reajuste: " + salarioInicial);
             System.out.println("Percentual de aumento aplicado: 10%");
             System.out.println("O valor do aumento: " + valorDoReajuste);
             System.out.println("Salario com reajuste: " + salarioComReajuste);
-        }
-        else if (salarioInicial >= 1500){
-            double valorDoReajuste = (salarioInicial * 5)/100;
+        } else if (salarioInicial >= 1500) {
+            double valorDoReajuste = (salarioInicial * 5) / 100;
             double salarioComReajuste = salarioInicial + valorDoReajuste;
 
             System.out.println("Salario antes do reajuste: " + salarioInicial);
@@ -60,5 +59,6 @@ public class EX11ReajusteSalarial {
             System.out.println("O valor do aumento: " + valorDoReajuste);
             System.out.println("Salario com reajuste: " + salarioComReajuste);
         }
+        scanner.close();
     }
 }

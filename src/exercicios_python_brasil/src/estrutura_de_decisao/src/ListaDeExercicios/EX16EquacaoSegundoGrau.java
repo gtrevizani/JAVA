@@ -17,31 +17,32 @@ public class EX16EquacaoSegundoGrau {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Informe o falor de A: ");
-        Integer a = scanner.nextInt();
+        int a = scanner.nextInt();
 
-        if (a==0){
+        if (a == 0) {
             System.out.println("Nao eh uma equacao do segundo grau");
         } else {
             System.out.print("Informe o valor de B: ");
-            Integer b = scanner.nextInt();
+            int b = scanner.nextInt();
             System.out.print("Informe o valor de C: ");
-            Integer c = scanner.nextInt();
+            int c = scanner.nextInt();
 
-            Double elevacaoo = Math.pow(b,b);
-            Double delta = (elevacaoo) - (4 * a * c);
+            double elevacaoo = Math.pow(b, b);
+            double delta = (elevacaoo) - (4 * a * c);
 
-            if(delta<0){
+            if (delta < 0) {
                 System.out.println("Delta menor que 0. Sem raizes reais.");
-            } else if (delta == 0){
-                Integer raiz = (-b) / (2 * a);
+            } else if (delta == 0) {
+                int raiz = (-b) / (2 * a);
                 System.out.println("A raaiz eh: " + raiz);
             } else {
-                Double elevacao = Math.pow(delta,0.5);
-                Double raizUm = (-b + (elevacao)) / (2 * a);
-                Double raizDois = (-b - (elevacao)) / (2 * a);
+                double elevacao = Math.pow(delta, 0.5);
+                double raizUm = (-b + (elevacao)) / (2 * a);
+                double raizDois = (-b - (elevacao)) / (2 * a);
                 System.out.println("Raiz 1: " + raizUm);
                 System.out.println("Raiz 2: " + raizDois);
             }
         }
+        scanner.close();
     }
 }
