@@ -26,27 +26,25 @@ public class EX04VogalOuConsoante {
                                 consoantesNoVetor[36] = 'Y'; consoantesNoVetor[37] = 'y'; consoantesNoVetor[38] = 'W';
                                 consoantesNoVetor[39] = 'w'; consoantesNoVetor[40] = 'Z'; consoantesNoVetor[41] = 'z';
 
+
         System.out.print("Insira uma letra: ");
         char letra = scanner.nextLine().charAt(0);
 
-        for(int i=0; i<42; i++) {
+        boolean sinal = false;
+        for (int i = 0; i < 10; i++) {
             if (letra == vogaisNoVetor[i]) {
                 System.out.println("Essa letra é uma vogal.");
-            } else if (letra == consoantesNoVetor[i]){
-                System.out.println("Essa letra é uma consoante.");
-            } else {
-                System.out.println("Caractere invalido.");
+                sinal = true;
             }
         }
         for(int i=0; i<42; i++){
             if(letra==consoantesNoVetor[i]){
                 System.out.println("Essa letra é uma consoante");
+                sinal = true;
             }
         }
-        for(int i=0; i<42; i++){
-            if(letra!=i){
-                System.out.println("Caractere invalido.");
-            }
+        if(sinal==false){
+            System.out.println("Caracetere inválido.");
         }
         scanner.close();
     }
