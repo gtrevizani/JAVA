@@ -43,7 +43,7 @@ public class EX04VogalOuConsoante {
                 sinal = true;
             }
         }
-        if(sinal==false){
+        if(!sinal){
             System.out.println("Caracetere inválido.");
         }
         scanner.close();
