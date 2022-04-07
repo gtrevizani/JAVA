@@ -8,16 +8,21 @@ public class EX03EscolhaSexo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insira uma opção (F ou M): ");
-        char caractere = scanner.nextLine().charAt(0);
+        char sexo = scanner.nextLine().charAt(0);
 
-        if (caractere=='f' || caractere=='F'){
-            System.out.println("Feminino.");
-        }
-        else if (caractere=='m' || caractere=='M'){
-            System.out.println("Masculino.");
-        }
-        else{
-            System.out.println("Sexo inválido.");
+        boolean sexoMasculino = sexo == 'M' || sexo == 'm';
+        boolean sexoFeminino = sexo == 'F' || sexo == 'f';
+        boolean sexoMasculinoOuFeminino = !sexoFeminino || !sexoMasculino;
+
+        if (sexoMasculinoOuFeminino) {
+            System.out.println("Sexo inválido");
+        } else {
+            if (sexoFeminino) {
+                System.out.println("Feminino.");
+            }
+            if (sexoMasculino) {
+                System.out.println("Masculino.");
+            }
         }
         scanner.close();
     }

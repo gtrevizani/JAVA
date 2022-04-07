@@ -10,15 +10,12 @@ public class EX01ImprimirOMaior {
         Double numeroUm = scanner.nextDouble();
         System.out.print("Insira o 2° numero: ");
         Double numeroDois = scanner.nextDouble();
-
-        if (numeroUm > numeroDois){
+        if (numeroUm > numeroDois) {
             System.out.println("O maior: " + numeroUm);
-        }
-        else if (numeroDois > numeroUm){
+        } else if (numeroDois > numeroUm) {
             System.out.println("O maior: " + numeroDois);
-        }
-        else if (numeroUm.equals(numeroDois)){
-            System.out.println("O maior: " + numeroDois);
+        } else {
+            System.out.println("Numeros iguais");
         }
         scanner.close();
     }
