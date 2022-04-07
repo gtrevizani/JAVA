@@ -11,25 +11,27 @@ import java.util.Scanner;
 public class EX05LeituraDeNotasParciais {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Insira a primeira nota: ");
-        Double notaUm = scanner.nextDouble();
+        double notaUm = scanner.nextDouble();
         System.out.print("Insira a segunda nota: ");
-        Double notaDois = scanner.nextDouble();
+        double notaDois = scanner.nextDouble();
         System.out.println(" ");
 
-        Double media = obterMedia(notaUm, notaDois);
-
-        if(media==10){
-            System.out.println("Média: " + media);
-            System.out.println("Aprovado com Distinção.");
-        }
-        else if (media>=7){
-            System.out.println("Média: " + media);
-            System.out.println("Aprovado.");
-        }
-        else if(media<7){
-            System.out.println("Média: " + media);
-            System.out.println("Reprovado.");
+        if (notaUm < 0 || notaDois < 0 || notaUm > 10 || notaDois > 10) {
+            System.out.println("Nota(s) inválida(s).");
+        } else {
+            double media = obterMedia(notaUm, notaDois);
+            if (media == 10) {
+                System.out.println("Média: " + media);
+                System.out.println("Aprovado com Distinção.");
+            } else if (media >= 7) {
+                System.out.println("Média: " + media);
+                System.out.println("Aprovado.");
+            } else if (media < 7) {
+                System.out.println("Média: " + media);
+                System.out.println("Reprovado.");
+            }
         }
         scanner.close();
     }

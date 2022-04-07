@@ -6,10 +6,12 @@ import java.util.Scanner;
 public class EX01ImprimirOMaior {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Insira o 1° numero: ");
-        Double numeroUm = scanner.nextDouble();
+        double numeroUm = scanner.nextDouble();
         System.out.print("Insira o 2° numero: ");
-        Double numeroDois = scanner.nextDouble();
+        double numeroDois = scanner.nextDouble();
+
         if (numeroUm > numeroDois) {
             System.out.println("O maior: " + numeroUm);
         } else if (numeroDois > numeroUm) {

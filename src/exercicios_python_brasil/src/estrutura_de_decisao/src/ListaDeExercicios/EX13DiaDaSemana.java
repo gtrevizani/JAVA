@@ -14,10 +14,11 @@ public class EX13DiaDaSemana {
         System.out.println("2 - Segunda; \t 5 - Quinta;");
         System.out.println("3 - Terca; \t\t 6 - Sexta;");
         System.out.println(" ");
-        System.out.print("Informe o dia da semana: ");
+        System.out.print("Informe um numero: ");
         int diaDaSemana = scanner.nextByte();
 
-        switch (diaDaSemana){
+        switch (diaDaSemana) {
+            default -> System.out.println("Valor inválido.");
             case 1 -> System.out.println("Hoje é Domingo.");
             case 2 -> System.out.println("Hoje é Segunda.");
             case 3 -> System.out.println("Hoje é Terca.");

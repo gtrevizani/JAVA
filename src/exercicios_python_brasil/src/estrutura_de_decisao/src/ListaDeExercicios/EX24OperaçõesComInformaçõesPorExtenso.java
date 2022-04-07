@@ -2,7 +2,15 @@ package estrutura_de_decisao.src.ListaDeExercicios;
 
 import java.util.Scanner;
 
-public class EX24k {
+/*
+Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
+O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+
+    par ou ímpar;
+    positivo ou negativo;
+    inteiro ou decimal.
+ */
+public class EX24OperaçõesComInformaçõesPorExtenso {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -13,17 +21,19 @@ public class EX24k {
         System.out.print("Digite o 2º número: ");
         Double segundoNumero = scanner.nextDouble();
 
-        if(operacaoDesejada == '+') {
+        if (operacaoDesejada == '+') {
             double resultado = primeiroNumero + segundoNumero;
             if (resultado < 0) {
                 System.out.print("\nO numero é negativo\n");
             } else {
                 System.out.print("\nO numero é positivo\n");
-            } if (resultado % 2 == 0) {
+            }
+            if (resultado % 2 == 0) {
                 System.out.print("O numero é par\n");
             } else {
                 System.out.print("O numero é impar\n");
-            } if (resultado % 1 == 0) {
+            }
+            if (resultado % 1 == 0) {
                 System.out.print("O numero é inteiro\n");
             } else {
                 System.out.print("O numero é decimal\n");
@@ -35,11 +45,13 @@ public class EX24k {
                 System.out.print("\nO numero é negativo\n");
             } else {
                 System.out.print("\nO numero é positivo\n");
-            } if (resultado % 2 == 0) {
+            }
+            if (resultado % 2 == 0) {
                 System.out.print("O numero é par\n");
             } else {
                 System.out.print("O numero é impar\n");
-            } if (resultado % 1 == 0) {
+            }
+            if (resultado % 1 == 0) {
                 System.out.print("O numero é inteiro\n");
             } else {
                 System.out.print("O numero é decimal\n");
@@ -51,11 +63,13 @@ public class EX24k {
                 System.out.print("\nO numero é negativo\n");
             } else {
                 System.out.print("\nO numero é positivo\n");
-            } if (resultado % 2 == 0) {
+            }
+            if (resultado % 2 == 0) {
                 System.out.print("O numero é par\n");
             } else {
                 System.out.print("O numero é impar\n");
-            } if (resultado % 1 == 0) {
+            }
+            if (resultado % 1 == 0) {
                 System.out.print("O numero é inteiro\n");
             } else {
                 System.out.print("O numero é decimal\n");
@@ -67,11 +81,13 @@ public class EX24k {
                 System.out.print("\nO numero é negativo\n");
             } else {
                 System.out.print("\nO numero é positivo\n");
-            } if (resultado % 2 == 0) {
+            }
+            if (resultado % 2 == 0) {
                 System.out.print("O numero é par\n");
             } else {
                 System.out.print("O numero é impar\n");
-            } if (resultado % 1 == 0) {
+            }
+            if (resultado % 1 == 0) {
                 System.out.print("O numero é inteiro\n");
             } else {
                 System.out.print("O numero é decimal\n");

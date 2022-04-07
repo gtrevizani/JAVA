@@ -7,9 +7,9 @@ public class EX04VogalOuConsoante {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int quantidadeVogal = 10;
-        int vogaisNoVetor[] = new int[quantidadeVogal];
+        int[] vogaisNoVetor = new int[quantidadeVogal];
         int quantidadeConsoante = 42;
-        int consoantesNoVetor[] = new int[quantidadeConsoante];
+        int[] consoantesNoVetor = new int[quantidadeConsoante];
 
         vogaisNoVetor[0] = 'A'; consoantesNoVetor[0] = 'B'; consoantesNoVetor[10] = 'H'; consoantesNoVetor[20] = 'N';
         vogaisNoVetor[1] = 'a'; consoantesNoVetor[1] = 'b'; consoantesNoVetor[11] = 'h'; consoantesNoVetor[21] = 'n';
@@ -31,6 +31,7 @@ public class EX04VogalOuConsoante {
         char letra = scanner.nextLine().charAt(0);
 
         boolean sinal = false;
+
         for (int i = 0; i < 10; i++) {
             if (letra == vogaisNoVetor[i]) {
                 System.out.println("Essa letra é uma vogal.");
@@ -39,7 +40,7 @@ public class EX04VogalOuConsoante {
         }
         for(int i=0; i<42; i++){
             if(letra==consoantesNoVetor[i]){
-                System.out.println("Essa letra é uma consoante");
+                System.out.println("Essa letra é uma consoante.");
                 sinal = true;
             }
         }

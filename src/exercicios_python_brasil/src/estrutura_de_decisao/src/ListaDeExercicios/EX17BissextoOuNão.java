@@ -10,13 +10,13 @@ public class EX17BissextoOuNão {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Digite um ano: ");
-        Integer ano = scanner.nextInt();
+        int ano = scanner.nextInt();
 
-        if (ano % 4 == 0){
-            System.out.println("O ano eh bissexto");
+        if (ano % 4 == 0) {
+            System.out.println("O ano é bissexto");
         } else {
-            System.out.println("O ano nao eh bissexto");
+            System.out.println("O ano nao é bissexto");
         }
-
+        scanner.close();
     }
 }

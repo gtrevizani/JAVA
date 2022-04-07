@@ -16,7 +16,7 @@ public class EX15Triangulos {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int espacos = 3;
-        int vetor[] = new int[espacos];
+        int[] vetor = new int[espacos];
 
         for (int i = 0; i < 3; i++) {
             System.out.print("Insira o lado de posição " + i + " do triangulo: ");

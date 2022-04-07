@@ -1,7 +1,17 @@
 package estrutura_de_decisao.src.ListaDeExercicios;
 
 import java.util.Scanner;
+/*
+Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+"Telefonou para a vítima?"
+"Esteve no local do crime?"
+"Mora perto da vítima?"
+"Devia para a vítima?"
+"Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime.
+Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice"
+e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
 
+ */
 public class EX25k {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,30 +32,29 @@ public class EX25k {
         int taxaDeRespostas = 0; //cada resposta positiva deve ser consirada +1
 
         if (telefonouParaVitima == 's') {
-            taxaDeRespostas = taxaDeRespostas + 1;
-            if (esteveNoLocalDoCrime == 's') {
-                taxaDeRespostas = taxaDeRespostas + 1;
-                if (moraPertoDaVitima == 's') {
-                    taxaDeRespostas = taxaDeRespostas + 1;
-                    if (deviaParaVitima == 's') {
-                        taxaDeRespostas = taxaDeRespostas + 1;
-                        if (trabalhouComVitima == 's') {
-                            taxaDeRespostas = taxaDeRespostas + 1;
-                        }
-                    }
-                }
-            }
+            taxaDeRespostas += 1;
+        } else if (esteveNoLocalDoCrime == 's') {
+            taxaDeRespostas += 1;
+        } else if (moraPertoDaVitima == 's') {
+            taxaDeRespostas += 1;
+        } else if (deviaParaVitima == 's') {
+            taxaDeRespostas += 1;
+        } else if (trabalhouComVitima == 's') {
+            taxaDeRespostas += 1;
         }
-        if (taxaDeRespostas == 5) {
-            System.out.print("Você é o assasino!");
-        } else if (taxaDeRespostas == 2) {
+
+        if (taxaDeRespostas == 2) {
+            System.out.println(" ");
             System.out.print("Você é um possível suspeito!");
         } else if (taxaDeRespostas == 3 || taxaDeRespostas == 4) {
+            System.out.println(" ");
             System.out.print("Você é cumplice do assasinato!");
-        } else if (taxaDeRespostas == 1) {
-            System.out.print("Você esta liberado, inocente.");
-        } else {
-            System.out.print("insira valores validos.");
+        } else if (taxaDeRespostas == 5) {
+            System.out.println(" ");
+            System.out.print("Você é o assasino!");
+        } else{
+            System.out.println(" ");
+            System.out.println("Você esta liberado, inocente.");
         }
         scanner.close();
     }

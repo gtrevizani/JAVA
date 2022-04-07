@@ -12,9 +12,9 @@ public class EX03EscolhaSexo {
 
         boolean sexoMasculino = sexo == 'M' || sexo == 'm';
         boolean sexoFeminino = sexo == 'F' || sexo == 'f';
-        boolean sexoMasculinoOuFeminino = !sexoFeminino || !sexoMasculino;
+        boolean sexoMasculinoOuFeminino = sexoFeminino || sexoMasculino;
 
-        if (sexoMasculinoOuFeminino) {
+        if (!sexoMasculinoOuFeminino) {
             System.out.println("Sexo inválido");
         } else {
             if (sexoFeminino) {

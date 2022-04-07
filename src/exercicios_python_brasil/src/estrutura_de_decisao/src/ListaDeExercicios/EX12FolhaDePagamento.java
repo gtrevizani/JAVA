@@ -37,7 +37,9 @@ public class EX12FolhaDePagamento {
 
         Double salarioBruto = ganhoPorHora * horasTrabalhadasNoMes;
 
-        if(salarioBruto <= 900){
+        if (ganhoPorHora < 0 || horasTrabalhadasNoMes < 0) {
+            System.out.println("Valores inválidos.");
+        } else if (salarioBruto <= 900) {
             Double impostoDeRenda = (salarioBruto * 0) / 100;
             Double inss = (salarioBruto * 10) / 100;
             Double fgts = (salarioBruto * 11) / 100;
@@ -52,8 +54,7 @@ public class EX12FolhaDePagamento {
             System.out.println("Total de descontos:     R$" + totalDeDescontos);
             System.out.println("----------------------------------");
             System.out.println("Salario Liquido:        R$" + salarioLiquido);
-        }
-        if (salarioBruto > 900 && salarioBruto <= 1500){
+        } else if (salarioBruto > 900 && salarioBruto <= 1500) {
             Double impostoDeRenda = (salarioBruto * 5) / 100;
             Double inss = (salarioBruto * 10) / 100;
             Double fgts = (salarioBruto * 11) / 100;
@@ -68,8 +69,7 @@ public class EX12FolhaDePagamento {
             System.out.println("Total de descontos:     R$" + totalDeDescontos);
             System.out.println("----------------------------------");
             System.out.println("Salario Liquido:        R$" + salarioLiquido);
-        }
-        if (salarioBruto > 1500 && salarioBruto <= 2500){
+        } else if (salarioBruto > 1500 && salarioBruto <= 2500) {
             Double impostoDeRenda = (salarioBruto * 10) / 100;
             Double inss = (salarioBruto * 10) / 100;
             Double fgts = (salarioBruto * 11) / 100;
@@ -84,8 +84,7 @@ public class EX12FolhaDePagamento {
             System.out.println("Total de descontos:     R$" + totalDeDescontos);
             System.out.println("----------------------------------");
             System.out.println("Salario Liquido:        R$" + salarioLiquido);
-        }
-        if (salarioBruto > 2500){
+        } else if (salarioBruto > 2500) {
             Double impostoDeRenda = (salarioBruto * 20) / 100;
             Double inss = (salarioBruto * 10) / 100;
             Double fgts = (salarioBruto * 11) / 100;

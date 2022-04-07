@@ -5,28 +5,27 @@ import java.util.Scanner;
 public class EX07MaiorEMenor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int quantidadeDoVetor = 4;
+        int[] numerosNoVetor = new int[quantidadeDoVetor];
 
-        int quantidadeDoVetor = 3;
-        int numerosNoVetor[] = new int[quantidadeDoVetor];
-
-
-        for (int i=0; i<3; i++){
+        for (int i=1; i<4; i++){
             System.out.print("Insira o " + i +"° numero: ");
             numerosNoVetor[i] = scanner.nextInt();
         }
-        int maior = numerosNoVetor[0];
-        for (int i=0; i<3; i++){
+        int maior = numerosNoVetor[1];
+        for (int i=1; i<4; i++){
             if (maior<numerosNoVetor[i]){
                 maior=numerosNoVetor[i];
             }
         }
-        int menor = numerosNoVetor[0];
-        for (int i=0; i<3; i++){
+        int menor = numerosNoVetor[1];
+        for (int i=1; i<4; i++){
             if(menor>numerosNoVetor[i]){
                 menor=numerosNoVetor[i];
             }
         }
         System.out.println("O maior valor é: " + maior);
         System.out.println("O menor valor é: " + menor);
+        scanner.close();
     }
 }

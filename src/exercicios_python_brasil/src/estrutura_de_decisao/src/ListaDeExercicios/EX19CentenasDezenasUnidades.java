@@ -18,18 +18,18 @@ public class EX19CentenasDezenasUnidades {
         System.out.print("Informe um número inteiro: ");
         Integer numeroInteiro = scanner.nextInt();
 
-        if (numeroInteiro >=1000){
+        if (numeroInteiro >= 1000 || numeroInteiro < 0) {
             System.out.println("Numero inválido");
         } else {
-            if(numeroInteiro >=1){
-                Integer unidade = numeroInteiro % 10;
-                numeroInteiro = (numeroInteiro - unidade)/10;
-                Integer dezena = numeroInteiro % 10;
-                numeroInteiro = (numeroInteiro - dezena)/10;
-                Integer centena = numeroInteiro;
+            Integer unidade = numeroInteiro % 10;
+            numeroInteiro = (numeroInteiro - unidade) / 10;
+            Integer dezena = numeroInteiro % 10;
+            numeroInteiro = (numeroInteiro - dezena) / 10;
+            Integer centena = numeroInteiro;
 
-                System.out.println(centena + " centena(s), " + dezena + " dezena(s) e " + unidade + " unidade(s).");
-            }
+            System.out.println(centena + " centena(s), " + dezena + " dezena(s) e " + unidade + " unidade(s).");
+
         }
+        scanner.close();
     }
 }

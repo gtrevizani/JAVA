@@ -18,31 +18,30 @@ public class EX21Saque {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Digite o valor a ser sacado (entre 10 e 600): ");
-        int valor_Do_Saque = scanner.nextInt();
+        int valorDoSaque = scanner.nextInt();
 
-        if (valor_Do_Saque < 10 || valor_Do_Saque > 6000) {
+        if (valorDoSaque < 10 || valorDoSaque > 600) {
             System.out.print("O valor inserido é inválido...");
-        } else
-        {
-            int centena = valor_Do_Saque/100;
-            valor_Do_Saque = (Integer) (valor_Do_Saque - centena * 100);
-            int cinquenta = valor_Do_Saque / 50;
-            valor_Do_Saque = (Integer) (valor_Do_Saque - cinquenta * 50);
-            int dez = valor_Do_Saque / 10;
-            valor_Do_Saque = (Integer) (valor_Do_Saque - dez * 10);
-            int cinco = valor_Do_Saque / 5;
-            valor_Do_Saque = (Integer) (valor_Do_Saque - cinco * 5);
-            int um = valor_Do_Saque;
+        } else {
+            int centena = valorDoSaque / 100;
+            valorDoSaque = (Integer) (valorDoSaque - centena * 100);
+            int cinquenta = valorDoSaque / 50;
+            valorDoSaque = (Integer) (valorDoSaque - cinquenta * 50);
+            int dez = valorDoSaque / 10;
+            valorDoSaque = (Integer) (valorDoSaque - dez * 10);
+            int cinco = valorDoSaque / 5;
+            valorDoSaque = (Integer) (valorDoSaque - cinco * 5);
+            int um = valorDoSaque;
 
-            if(centena > 0)
-                System.out.print(centena+ " nota(s) de cem.\n");
-            if(cinquenta > 0)
-                System.out.print(cinquenta+ " nota(s) de cinquenta.\n");
-            if(dez > 0)
-                System.out.print(dez+ " nota(s) de dez.\n");
-            if(cinco > 0)
-                System.out.print(cinco+ " nota(s) de cinco");
-            if(um > 0)
+            if (centena > 0)
+                System.out.print(centena + " nota(s) de cem.\n");
+            if (cinquenta > 0)
+                System.out.print(cinquenta + " nota(s) de cinquenta.\n");
+            if (dez > 0)
+                System.out.print(dez + " nota(s) de dez.\n");
+            if (cinco > 0)
+                System.out.print(cinco + " nota(s) de cinco");
+            if (um > 0)
                 System.out.print(um + " nota(s) de um.");
         }
         scanner.close();
