@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Vetores1Dimensao {
     public static void main(String[] args) {
-        /*String[] cardapio = new String[] {"Calabresa", "Atum", "Queijo", "Presunto"};
+        String[] cardapio = new String[] {"Calabresa", "Atum", "Queijo", "Presunto"};
 
         System.out.println("Escolha o sabor: ");
         for (int i = 0; i< cardapio.length; i++){
@@ -21,6 +21,6 @@ public class Vetores1Dimensao {
         cardapio[3] = "Frango";
         for(int i =0; i< cardapio.length; i++){
             System.out.println(cardapio[i]);
-        }*/
+        }
     }
 }
