@@ -1,4 +1,4 @@
-package estrutura_de_decisao1.src.estrutura_de_decisao;
+package estrutura_de_decisao.src.estrutura_de_decisao;
 
 public class EstruturaIf {
     public static void main(String[] args) {

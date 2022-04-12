@@ -8,15 +8,19 @@ Armazene cada uma dessas tarefas em um vetor e, no final, imprima as tarefas nov
  */
 public class Exercicio01 {
     public static void main(String[] args) {
-        String tarefas[] = new String[6];
+        String[] tarefas = new String[6];
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 1; i< tarefas.length; i++){
-            System.out.print("Insira a " + i + "° tarefa mais importante: ");
+            System.out.print("Insira a " + i + "° tarefa mais importante do seu dia: ");
             tarefas[i] = scanner.nextLine();
         }
+        System.out.println(" ");
+        System.out.println("As 5 tarefas mais importantes do seu dia:");
         for(int i = 1; i<  tarefas.length; i++){
+
             System.out.println("["+i+"]" + tarefas[i]);
         }
+        scanner.close();
     }
 }
