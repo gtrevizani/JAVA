@@ -1,48 +1,36 @@
 package vetores;
 
-import java.util.Scanner;
-
-public class Exercicio01 {
+public class Vetores1Dimensao {
     public static void main(String[] args) {
+		/*
+		String[] cardapio = new String[] {"Calabresa", "Atum", "Queijo", "Presunto"};
+        System.out.println("Escolha o sabor:");
+        for (int i =0; i < cardapio.length; i++) {
+            System.out.println("[" + i + "]" + cardapio[i]);
+        }
         Scanner scanner = new Scanner(System.in);
-        imprimirTraco();
-        String[] cursos = new String[] {"Java EE", "Spring", "Java OO Avançado"};
-        System.out.println("Escolha dentre os cursos abaixo: ");
-        for(int i = 0; i < cursos.length; i++) {
-            System.out.println("[" + i + "] " + cursos[i]);
-        }
-        System.out.print("O curso que você deseja é o: ");
-        Integer posicaoCursoEscolhido = scanner.nextInt();
-        Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
-        if (!posicaoValida) {
-            encerrarProgramaPorCausaDePosicaoInvalida();
-        }
-        imprimirTraco();
-        String[] formasPagamento = new String[] {"Cartão", "Boleto"};
-        System.out.println("Escolha dentre as formas de pagamento abaixo: ");
-        for(int i = 0; i < formasPagamento.length; i++) {
-            System.out.println("[" + i + "] " + formasPagamento[i]);
-        }
-        System.out.print("Sua forma de pagamento escolhida é: ");
-        Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
-        posicaoValida = posicaoFormaPagamentoEscolhida >= 0
-                && posicaoFormaPagamentoEscolhida < formasPagamento.length;
-        if (!posicaoValida) {
-            encerrarProgramaPorCausaDePosicaoInvalida();
-        }
-        String cursoEscolhido = cursos[posicaoCursoEscolhido];
-        String formaPagamentoEscolhida = formasPagamento[posicaoFormaPagamentoEscolhida];
-        imprimirTraco();
-        System.out.println("O curso escolhido foi " + cursoEscolhido + " e a forma de pagamento é " + formaPagamentoEscolhida);
-        scanner.close();
-    }
+        System.out.println("Digite o número referente ao sabor: ");
+        Integer saborEcolhido = scanner.nextInt();
+        System.out.println(" Voce escolheu o sabor: " + cardapio[saborEcolhido]);
+        scanner.close();*/
 
-    static void imprimirTraco() {
-        System.out.println("------------------------------------------------");
-    }
+/*
+        String[] cardapio = new String[]{"Calabresa", "Atum", "Queijo", "Presunto"};
+        cardapio[3] = "Frango";
+        for (int i = 0; i < cardapio.length; i++) {
+            System.out.println(cardapio[i]);
+        }*/
 
-    static void encerrarProgramaPorCausaDePosicaoInvalida() {
-        System.err.println("Posição inválida!");
-        System.exit(1);
+        String[] cardapio = new String[4];
+        cardapio[0] = "Calabresa";
+        cardapio[1] = "Atum";
+        cardapio[2] = "Queijo";
+        cardapio[3] = "Presunto";
+
+        for (int i = 0; i < cardapio.length; i++) {
+            System.out.println(cardapio[i]);
+
+
+        }
     }
 }

@@ -13,11 +13,13 @@ public class Exercicio01 {
         }
         System.out.print("O curso que você deseja é o: ");
         Integer posicaoCursoEscolhido = scanner.nextInt();
+
         Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
         if (!posicaoValida) {
             encerrarProgramaPorCausaDePosicaoInvalida();
         }
         imprimirTraco();
+
         String[] formasPagamento = new String[] {"Cartão", "Boleto"};
         System.out.println("Escolha dentre as formas de pagamento abaixo: ");
         for(int i = 0; i < formasPagamento.length; i++) {
@@ -25,6 +27,7 @@ public class Exercicio01 {
         }
         System.out.print("Sua forma de pagamento escolhida é: ");
         Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
+
         posicaoValida = posicaoFormaPagamentoEscolhida >= 0
                 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
         if (!posicaoValida) {
