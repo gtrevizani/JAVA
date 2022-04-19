@@ -1,8 +1,7 @@
-package vetores;
+package metodos;
 
 import java.util.Scanner;
-
-public class Exercicio01 {
+public class PrimeiroMetodo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         imprimirTraco();
@@ -15,7 +14,8 @@ public class Exercicio01 {
         Integer posicaoCursoEscolhido = scanner.nextInt();
         Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
         if (!posicaoValida) {
-            encerrarProgramaPorCausaDePosicaoInvalida();
+            System.err.println("Posição inválida!");
+            System.exit(1);
         }
         imprimirTraco();
         String[] formasPagamento = new String[] {"Cartão", "Boleto"};
@@ -28,7 +28,8 @@ public class Exercicio01 {
         posicaoValida = posicaoFormaPagamentoEscolhida >= 0
                 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
         if (!posicaoValida) {
-            encerrarProgramaPorCausaDePosicaoInvalida();
+            System.err.println("Posição inválida!");
+            System.exit(1);
         }
         String cursoEscolhido = cursos[posicaoCursoEscolhido];
         String formaPagamentoEscolhida = formasPagamento[posicaoFormaPagamentoEscolhida];
@@ -38,11 +39,6 @@ public class Exercicio01 {
     }
 
     static void imprimirTraco() {
-        System.out.println("------------------------------------------------");
-    }
-
-    static void encerrarProgramaPorCausaDePosicaoInvalida() {
-        System.err.println("Posição inválida!");
-        System.exit(1);
+        System.out.println("----------------------------------------------");
     }
 }
