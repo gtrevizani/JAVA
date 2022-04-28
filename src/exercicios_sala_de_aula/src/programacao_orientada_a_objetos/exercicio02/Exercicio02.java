@@ -10,7 +10,6 @@ public class Exercicio02 {
         Product product = new Product();
         product.nome = "SpainerHow";
         product.quantidadeEmEstoque = 11;
-
-        System.out.println("Reposição necessária? " + product.exigeReposicao());
+        System.out.println("Reposição de " + product.nome + " necessária? " + product.exigeReposicao());
     }
 }
