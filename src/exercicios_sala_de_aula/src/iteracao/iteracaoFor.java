@@ -2,15 +2,15 @@ package iteracao;
 
 public class iteracaoFor {
     public static void main(String[] args) {
-        Integer[] produtos = new Integer[] {100, 225, 300};
+        Integer[] produtoss = new Integer[] {100, 225, 300};
 
-        for(int i = 0; i < produtos.length; i++){
-            Integer produto = produtos[i];
+        for(int i = 0; i < produtoss.length; i++){
+            Integer itens = produtoss[i];
 
-            System.out.println("Produto de código: " + produto);
+            System.out.println("Product de código: " + itens);
 
-            if(produto.equals(225)){
-                System.out.println("Produto encontrado!");
+            if(itens.equals(225)){
+                System.out.println("Product encontrado!");
                 break;
             }
         }
