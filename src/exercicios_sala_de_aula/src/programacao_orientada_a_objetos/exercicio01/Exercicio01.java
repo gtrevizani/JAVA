@@ -1,4 +1,4 @@
-package programacao_orientada_a_objetos.primeira_classe.exercicio01;
+package programacao_orientada_a_objetos.exercicio01;
 
 /*
 Crie um método que informa necessidade de repor estoque
@@ -27,17 +27,12 @@ public class Exercicio01 {
     public static void main(String[] args) {
         Product product = new Product();
         product.nome = "SpinninSplaind";
-        product.quantidadeEstoque = 14;
-        boolean resultado = verficarReposicaoDeProduto(product);
-        if(resultado){
-            System.out.println("Reposição necessária.");
-        }else if(!resultado){
-            System.out.println("Não é necessário uma reposição.");
-        }
+        product.quantidadeEstoque = 9;
+
+        System.out.println("Reposição de " + product.nome + " necessária? " + verficarReposicaoDeProduto(product));
     }
 
     static boolean verficarReposicaoDeProduto(Product product) {
-        boolean valido = product.quantidadeEstoque < 10;
-        return valido;
+        return product.quantidadeEstoque < Product.QUANTIDADE_MINIMA_ESTOQUE;
     }
 }
