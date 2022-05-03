@@ -6,6 +6,6 @@ public class Product {
     static final Integer QUANTIDADE_MINIMA_ESTOQUE = 10;
 
     Boolean exigeReposicao() {
-        return quantidadeEmEstoque < QUANTIDADE_MINIMA_ESTOQUE;
+        return quantidadeEmEstoque < Product.QUANTIDADE_MINIMA_ESTOQUE;
     }
 }
