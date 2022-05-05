@@ -1,5 +1,10 @@
 package leitura_e_escrita_de_dados_em_arquivos;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Exercicio01 {
@@ -12,7 +17,30 @@ Depois que o usuário informar, uma a uma, suas tarefas, as mesmas serão salvas
 Para receber cada tarefa do usuário, use o laço while. Enquanto o usuário não digitar um "x" no console, continue
 pedindo que ele informe as atividades.
  */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
+        ArrayList<String> tarefas = new ArrayList<>();
+
+        String tarefa;
+        int i = 0;
+
+        while(true) {
+            System.out.print("Tarefa " + i * -1 + ": ");
+            tarefa = scanner.nextLine();
+
+            if("x".equals(tarefa)){
+                break;
+            }
+            tarefas.add(tarefa);
+            i--;
+        }
+
+        escreverNoArquivo("C:\\Users\\Administrador\\Desktop\\arquivo.txt", tarefas);
+        scanner.close();
+    }
+
+    private static void escreverNoArquivo(String arquivo, ArrayList<String> tarefas) throws IOException {
+        Path path = Paths.get(arquivo);
+        Files.write(path, tarefas);
     }
 }
