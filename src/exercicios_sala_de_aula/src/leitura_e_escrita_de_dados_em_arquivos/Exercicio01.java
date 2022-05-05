@@ -25,7 +25,7 @@ pedindo que ele informe as atividades.
         int i = 0;
 
         while(true) {
-            System.out.print("Tarefa " + i * -1 + ": a");
+            System.out.print("Tarefa " + i * -1 + ": ");
             tarefa = scanner.nextLine();
 
             if("x".equals(tarefa)){
