@@ -24,7 +24,7 @@ variável para invocar o método que valida a necessidade de reposição de esto
 No final, você vai exibir, no console, se é necessária a reposição ou não.
  */
 public class Exercicio01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Void - método de comando
         Product product = new Product();
         product.nome = "SpinninSplaind";
         product.quantidadeEstoque = 9;
@@ -33,6 +33,6 @@ public class Exercicio01 {
     }
 
     static boolean verficarReposicaoDeProduto(Product product) {
-        return product.quantidadeEstoque < Product.QUANTIDADE_MINIMA_ESTOQUE;
+        return product.quantidadeEstoque < Product.QUANTIDADE_MINIMA_ESTOQUE; // Return - método de consulta (query)
     }
 }
