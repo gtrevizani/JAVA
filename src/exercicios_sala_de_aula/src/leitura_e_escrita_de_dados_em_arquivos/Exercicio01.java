@@ -35,7 +35,7 @@ pedindo que ele informe as atividades.
             i--;
         }
 
-        escreverNoArquivo("C:\\Users\\Administrador\\Desktop\\arquivo.txt", tarefas);
+        escreverNoArquivo("C:\\Users\\Administrador\\Desktop\\tarefa.txt", tarefas);
         scanner.close();
     }
 
