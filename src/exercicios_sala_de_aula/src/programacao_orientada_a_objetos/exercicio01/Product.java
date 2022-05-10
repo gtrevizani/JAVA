@@ -1,4 +1,4 @@
-package programacao_orientada_a_objetos.exercicio03.exercicio01;
+package programacao_orientada_a_objetos.exercicio01;
 
 
 public class Product {
