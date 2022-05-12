@@ -1,10 +1,10 @@
 package exercicio03;
 
 public class Produto {
-    String nome;
+    String descricao;
     int quantidade;
 
-    public void descrever(Produto produto){
-        System.out.println("Nome: " + nome + "\n" + "Quantidade: " + quantidade);
+    void descrever(){
+        System.out.println("Descrição: " + descricao + "\n" + "Quantidade: " + quantidade);
     }
 }

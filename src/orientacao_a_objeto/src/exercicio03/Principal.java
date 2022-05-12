@@ -10,16 +10,24 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> produtos = new ArrayList<>();
+        System.out.println("Quantos produtos?");
+        int quantidadeProdutos = scanner.nextInt();
+        scanner.nextLine();
 
-        for(int i = 0; i<5; i++){
-            System.out.print("Produto " + i + ": ");
-            String produto = scanner.nextLine();
+        Estoque estoque = new Estoque();
+        estoque.produtos = new Produto[quantidadeProdutos];
 
-            produtos.add(produto);
+        for(int i = 0; i < estoque.produtos.length; i++){
+            estoque.produtos[i] = new Produto();
+            System.out.println("Produto " + i);
+            System.out.println("------------");
+            System.out.println("Informe descrição do produto:");
+            estoque.produtos[i].descricao = scanner.nextLine();
+            System.out.println("Informe quantidade de itens:");
+            estoque.produtos[i].quantidade = scanner.nextInt();
+            scanner.nextLine();
         }
-        Path arquivo = Paths.get("C:\\Users\\Administrador\\Desktop\\tarefa.txt");
-        Files.write(arquivo, produtos);
+        estoque.listarProdutos();
         scanner.close();
     }
 }

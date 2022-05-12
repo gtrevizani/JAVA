@@ -1,16 +1,13 @@
 package exercicio03;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Estoque {
-    ArrayList<String> produtos = new ArrayList<>();
+    Produto[] produtos;
 
-    Path arquivo = Paths.get("C:\\Users\\Administrador\\Desktop\\tarefa.txt");
-
-    List<String> produtos = Files.readAllLines(arquivo);
-
+    void listarProdutos(){
+        System.out.println("Produtos em estoque: ");
+        System.out.println("---------------------");
+        for (int i = 0; i < produtos.length; i++){
+            produtos[i].descrever();
+        }
+    }
 }
