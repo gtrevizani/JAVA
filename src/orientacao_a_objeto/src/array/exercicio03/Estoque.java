@@ -1,4 +1,4 @@
-package exercicio03;
+package array.exercicio03;
 
 public class Estoque {
     Produto[] produtos;

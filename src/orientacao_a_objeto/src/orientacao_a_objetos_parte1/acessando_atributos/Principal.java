@@ -1,4 +1,4 @@
-package acessando_atributos;
+package orientacao_a_objetos_parte1.acessando_atributos;
 
 public class Principal {
     public static void main(String[] args) {

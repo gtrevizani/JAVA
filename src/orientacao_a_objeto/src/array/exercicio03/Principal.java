@@ -1,10 +1,6 @@
-package exercicio03;
+package array.exercicio03;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 /*
 Exercício: arrays

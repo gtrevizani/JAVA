@@ -1,4 +1,4 @@
-package composicao_de_objetos;
+package orientacao_a_objetos_parte1.composicao_de_objetos;
 
 public class Principal {
     public static void main(String[] args) {

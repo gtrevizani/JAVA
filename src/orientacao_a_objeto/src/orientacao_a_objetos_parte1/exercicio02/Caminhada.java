@@ -1,4 +1,4 @@
-package exercicio02;
+package orientacao_a_objetos_parte1.exercicio02;
 
 public class Caminhada {
     public void andar(Pessoa pessoa){
