@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/src/exercicios_python_brasil/exercicios_python_brasil.iml" filepath="$PROJECT_DIR$/src/exercicios_python_brasil/exercicios_python_brasil.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/logica/logica.iml" filepath="$PROJECT_DIR$/src/logica/logica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/orientacao_a_objeto/orientacao_a_objeto.iml" filepath="$PROJECT_DIR$/src/orientacao_a_objeto/orientacao_a_objeto.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/orientacao_a_objetos/orientacao_a_objetos.iml" filepath="$PROJECT_DIR$/src/orientacao_a_objetos/orientacao_a_objetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/teste.iml" filepath="$PROJECT_DIR$/teste.iml" />
     </modules>
