@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica.desafio_polimorfismo_e_classes_abstratas;
+package cad02_orientacao_a_objetos_parte2.pratica.desafio_polimorfismo_e_classes_abstratas_2;
 
 import java.util.Arrays;
 
@@ -38,27 +38,7 @@ abstract class Conta { // Classe abstrata - pai.
                 '}';
     }
 
-    public void exibirListagem(Conta[] contas){
-        // 1 - while para percorrer
-        // 2 - polimorfismo para exibir conta a pagar e receber
-        // 3 - todos os detalhes para ContaPagar: descrição, valor, datavencimento, fornecedor.
-        // todos os detalhes para ContaReceber: descrição, valor, datavencimento, cliente.
-        int i = 0;
-        while(i<contas.length){
-//            if(contas[i] instanceof ContaPagar){
-//                System.out.println("CONTA {" + i + "}: " + " A PAGAR");
-//                System.out.println("Descrição: " + contas[i].getDescricao() + "\nValor: " + contas[i].getValor() +
-//                        "\nData de Vencimento: " + contas[i].getDataVencimento() + "\nSituação: " + contas[i].getSituacaoConta() + "\n");
-//            }
-//            if(contas[i] instanceof ContaReceber){
-//                System.out.println("CONTA {" + i + "}: " + "A RECEBER");
-//                System.out.println("Descrição: " + contas[i].getDescricao() + "\nValor: " + contas[i].getValor() +
-//                        "\nData de Vencimento: " + contas[i].getDataVencimento() + "\nSituação: " + contas[i].getSituacaoConta() + "\n");
-//            }
-            i++;
-        }
-        Arrays.asList(contas).stream().forEach(System.out::println);
-    }
+    public abstract void exibirDetalhes();
 
     public String getDescricao() {
         return this.descricao;

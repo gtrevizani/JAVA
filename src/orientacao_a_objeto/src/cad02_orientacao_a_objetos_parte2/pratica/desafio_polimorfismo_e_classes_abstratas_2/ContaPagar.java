@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica.desafio_polimorfismo_e_classes_abstratas;
+package cad02_orientacao_a_objetos_parte2.pratica.desafio_polimorfismo_e_classes_abstratas_2;
 
 
 public class ContaPagar extends Conta { // Classe filha, herda da classe pai Conta.
@@ -14,6 +14,17 @@ public class ContaPagar extends Conta { // Classe filha, herda da classe pai Con
         this.setValor(valor);
         this.setDataVencimento(dataVencimento);
     } // Construtor
+
+    public void exibirDetalhes() {
+        System.out.println("\nConta a Pagar");
+        System.out.println("===================================");
+        System.out.println("Fornecedor: " + this.getFornecedor().getNome());
+        System.out.println("Descrição: " + this.getDescricao());
+        System.out.println("Valor: " + this.getValor());
+        System.out.println("Data de vencimento: " + this.getDataVencimento());
+        System.out.println("Situação: " + this.getSituacaoConta());
+        System.out.println("===================================");
+    } // Método exibir detalhes
 
     public void pagar() {
         if (SituacaoConta.PAGA.equals(this.getSituacaoConta())) {
