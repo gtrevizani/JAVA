@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica.interfaces;
+package cad02_orientacao_a_objetos_parte2.teoria.ATT10_INTERFACES;
 
 public class TesteInterface {
     public static void main(String[] args) {
