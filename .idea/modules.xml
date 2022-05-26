@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/desafios_java_estruturas/desafios_java_estruturas.iml" filepath="$PROJECT_DIR$/src/desafios_java_estruturas/desafios_java_estruturas.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/java_basico/java_basico.iml" filepath="$PROJECT_DIR$/src/java_basico/java_basico.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/orientacao_a_objeto/orientacao_a_objeto.iml" filepath="$PROJECT_DIR$/src/orientacao_a_objeto/orientacao_a_objeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/_01_desafios_java_estruturas/_01_desafios_java_estruturas.iml" filepath="$PROJECT_DIR$/src/_01_desafios_java_estruturas/_01_desafios_java_estruturas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/_02_java_basico/_02_java_basico.iml" filepath="$PROJECT_DIR$/src/_02_java_basico/_02_java_basico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/_03_orientacao_a_objeto/_03_orientacao_a_objeto.iml" filepath="$PROJECT_DIR$/src/_03_orientacao_a_objeto/_03_orientacao_a_objeto.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/orientacao_a_objetos/orientacao_a_objetos.iml" filepath="$PROJECT_DIR$/src/orientacao_a_objetos/orientacao_a_objetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/teste.iml" filepath="$PROJECT_DIR$/teste.iml" />
     </modules>
