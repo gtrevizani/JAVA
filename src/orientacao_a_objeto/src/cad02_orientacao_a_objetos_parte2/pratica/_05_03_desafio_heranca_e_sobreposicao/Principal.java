@@ -13,8 +13,8 @@ Foi criada uma nova classe chamada Conta e a classe ContaPagar herda dessa nova 
 Os atributos, o método cancelar() e o construtor padrão da classe ContaPagar foram transferidos para a classe Conta.
 Foi criada uma nova classe chamada ContaReceber que herda da classe Conta.
 A classe ContaReceber possui o método cancelar(). Isso é uma sobreposição ao método de mesmo nome da classe Conta. Este método deve verificar se a conta a receber possui valor maior que 50 mil, pois só permitiremos o cancelamento de contas a receber para contas abaixo desse valor (vamos fingir que esse é um requisito do negócio).
-Para testar se suas classes estão funcionando, compile também e execute a classe Principal abaixo, que foi modificada:
-public class Principal {
+Para testar se suas classes estão funcionando, compile também e execute a classe MegaSena abaixo, que foi modificada:
+public class MegaSena {
 	public static void main(String[] args) {
 		// instanciando fornecedores
 		Fornecedor imobiliaria = new Fornecedor();

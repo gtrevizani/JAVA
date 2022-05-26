@@ -33,9 +33,9 @@ Ao fazer isso, você será obrigado a implementar esse novo método nas subclass
 isso! Esse método deve exibir todos os detalhes do objeto em um formato legal para aparecer em um relatório.
 Agora você pode voltar à classe RelatorioContas e invocar o método exibirDetalhes() durante a listagem. Veja que a classe
 RelatorioContas só deve conhecer o nome do método exibirDetalhes(), mais nada!
-Para testar, compile e execute a classe Principal abaixo:
+Para testar, compile e execute a classe MegaSena abaixo:
 
-public class Principal {
+public class MegaSena {
 	public static void main(String[] args) {
 		// instanciando fornecedores
 		Fornecedor imobiliaria = new Fornecedor();

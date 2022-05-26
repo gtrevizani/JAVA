@@ -16,8 +16,8 @@ As duas classes são JavaBeans. Quando desenhamos diagramas de classes, não há
 e setters de JavaBeans.
 O método pagar() deve apenas exibir na tela as informações do pagamento (descrição da conta, valor, data de vencimento
 e nome do fornecedor).
-Quando finalizar a criação das classes ContaPagar e Fornecedor, crie uma outra classe chamada Principal com o código-fonte abaixo:
-public class Principal {
+Quando finalizar a criação das classes ContaPagar e Fornecedor, crie uma outra classe chamada MegaSena com o código-fonte abaixo:
+public class MegaSena {
     	public static void main(String[] args) {
 		Fornecedor imobiliaria = new Fornecedor();
 		imobiliaria.setNome("Casa & Cia Negócios Imobiliários");
@@ -35,7 +35,7 @@ public class Principal {
 		conta3.pagar();
 	}
 }
-Agora compile e execute a classe Principal. Evite ver a resolução do desafio antes de resolver os problemas sozinho.
+Agora compile e execute a classe MegaSena. Evite ver a resolução do desafio antes de resolver os problemas sozinho.
 Bom trabalho! :)
 */
 public class Principal {

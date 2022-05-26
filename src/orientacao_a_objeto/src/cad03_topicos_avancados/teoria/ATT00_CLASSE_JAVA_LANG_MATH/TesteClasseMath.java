@@ -1,4 +1,4 @@
-package cad03_topicos_avancados;
+package cad03_topicos_avancados.teoria.ATT00_CLASSE_JAVA_LANG_MATH;
 
 import static java.lang.Math.max;
 import static java.lang.Math.PI;

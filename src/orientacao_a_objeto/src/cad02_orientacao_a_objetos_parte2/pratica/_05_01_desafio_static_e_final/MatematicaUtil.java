@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica._05_01_desafio_static_e_final_5_11;
+package cad02_orientacao_a_objetos_parte2.pratica._05_01_desafio_static_e_final;
 
 public class MatematicaUtil {
     public static final double PI = 3.14;

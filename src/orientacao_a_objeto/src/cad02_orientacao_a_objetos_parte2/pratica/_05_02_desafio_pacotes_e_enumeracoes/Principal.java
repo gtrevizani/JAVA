@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica._05_02_desafio_pacotes_e_enumeracoes_5_13;
+package cad02_orientacao_a_objetos_parte2.pratica._05_02_desafio_pacotes_e_enumeracoes;
 
 /*
 
@@ -32,8 +32,8 @@ As classes ContaPagar e Fornecedor e a enumeração SituacaoConta devem ficar no
 Se precisar de ajuda, não me ligue.
 Brincadeira... estou à disposição.
 Ok, seu analista lhe deu muito trabalho, mas pense como isso será útil para você aprender sobre as enumerações, pacotes e, claro, praticar Java. :)
-Quando terminar todas as solicitações do analista, modifique a classe Principal do desafio anterior para o código-fonte abaixo, compile tudo e execute.
-public class Principal {
+Quando terminar todas as solicitações do analista, modifique a classe MegaSena do desafio anterior para o código-fonte abaixo, compile tudo e execute.
+public class MegaSena {
 	public static void main(String[] args) {
 		Fornecedor imobiliaria = new Fornecedor();
 		imobiliaria.setNome("Casa & Cia Negócios Imobiliários");

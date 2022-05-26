@@ -24,7 +24,7 @@ tela item por item.
 
 3. Já temos as classes Produto e Estoque e parece que estamos no caminho certo, mas ainda não temos nenhuma classe para
 pegar a entrada do teclado do usuário, instanciar produtos e adiciona-los ao array. Vamos criar uma classe chamada
-Principal que faz isso.
+MegaSena que faz isso.
 Pronto! Mais um cliente satisfeito. Se quiser melhorar ainda mais o programa e fazer uma graça para o cliente, calcule a
 quantidade total de produtos no estoque e mostre no final da execução.
  */

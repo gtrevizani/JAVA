@@ -1,4 +1,4 @@
-package cad02_orientacao_a_objetos_parte2.pratica._05_01_desafio_static_e_final_5_11;
+package cad02_orientacao_a_objetos_parte2.pratica._05_01_desafio_static_e_final;
 /*
 Você se ingressou na equipe de desenvolvimento de um projeto open-source que visa criar uma biblioteca Java com diversas
 classes e métodos que calculam a maioria das fórmulas matemáticas simples ou complexas existentes.
