@@ -1,4 +1,4 @@
-package cad03_topicos_avancados.pratica.a;
+package cad03_topicos_avancados.pratica._06_01_desafio_excecoes;
 /*
 No desafio sobre herança e sobreposição, quando uma conta a pagar ou receber não podia ser paga, recebida ou cancelada, apenas exibíamos na tela uma mensagem usando a instrução System.out.println.
 Agora, neste desafio, você deve rever as mensagens de erro dos métodos ContaPagar.pagar(), ContaReceber.receber(), ContaReceber.cancelar() e Conta.cancelar() para lançar uma exceção.
