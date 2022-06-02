@@ -16,5 +16,11 @@ public class TesteCalendar {
 
         DateFormat formatador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         System.out.println(formatador.format(c.getTime()));
+
+        c.add(Calendar.MONTH, 1);
+        System.out.println(formatador.format(c.getTime()));
+
+        c.roll(Calendar.DAY_OF_MONTH, 1);
+        System.out.println(formatador.format(c.getTime()));
     }
 }
