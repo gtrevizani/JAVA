@@ -22,7 +22,8 @@ A classe Principal recebe a entrada do teclado do usuário, converte o texto par
 classe CalculadoraGravidez e realiza os cálculos, exibindo os resultados na tela. Essa classe está pronta para você,
 com exceção do método converterEmData(), que você deve implementar.
 
-O método converterEmData() recebe um parâmetro do tipo String e deve retornar um tipo Date. Use o que aprendeu na aula sobre datas para converter String em Date no formato "dd/MM/yyyy".
+O método converterEmData() recebe um parâmetro do tipo String e deve retornar um tipo Date. Use o que aprendeu na aula
+sobre datas para converter String em Date no formato "dd/MM/yyyy".
 private Date converterEmData(String texto) throws ParseException {
 	// implementar conversão de texto para data no formato dd/MM/yyyy
 }
