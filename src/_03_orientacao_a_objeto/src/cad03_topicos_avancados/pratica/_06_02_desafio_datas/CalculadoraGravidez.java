@@ -50,7 +50,7 @@ public class CalculadoraGravidez {
     }
 
     private Calendar converterDateParaCalendar(Date data) { // Método
-        Calendar calendar = new GregorianCalendar();
+        Calendar calendar = new GregorianCalendar(); // instanciamento
         calendar.setTime(data);
         return calendar;
     }
@@ -58,19 +58,19 @@ public class CalculadoraGravidez {
     public Date calcularDataEstimadaConcepcao() { // Método
         // implementar cálculo de data estimada da concepção
         // 2 semanas após a data do último período menstrual
-        Calendar dataEstimadaDaConcepcao = this.converterDateParaCalendar(dataUltimoPeriodoMenstrual);
-        dataEstimadaDaConcepcao.add(Calendar.WEEK_OF_YEAR, 2);
+        Calendar dataEstimadaDaConcepcao = this.converterDateParaCalendar(dataUltimoPeriodoMenstrual); // Instanciamento, chamada de um método privado com o this;
+        dataEstimadaDaConcepcao.add(Calendar.WEEK_OF_YEAR, 2); // Adição de semanas
 
-        return dataEstimadaDaConcepcao.getTime();
+        return dataEstimadaDaConcepcao.getTime(); // Retorno do getTime;
     }
 
     public Date calcularDataEstimadaParto() { // Método
         // implementar cálculo de data estimada para parto
         // 40 semanas após a data do último período menstrual
-        Calendar dataEstimadaParto = this.converterDateParaCalendar(this.dataUltimoPeriodoMenstrual);
-        dataEstimadaParto.add(Calendar.WEEK_OF_YEAR, 40);
+        Calendar dataEstimadaParto = this.converterDateParaCalendar(this.dataUltimoPeriodoMenstrual); // Instanciamento, chamada de um método privado com o this;
+        dataEstimadaParto.add(Calendar.WEEK_OF_YEAR, 40); // Adição de semanas
 
-        return dataEstimadaParto.getTime();
+        return dataEstimadaParto.getTime(); //  Retorno do getTime;
     }
 }
 
