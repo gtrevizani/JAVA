@@ -29,15 +29,12 @@ public class Principal {
             String ultimoPeriodoMenstrual = entrada.nextLine();
 
             Date dataUltimoPeriodoMenstrual = this.converterEmData(ultimoPeriodoMenstrual); // Variável recebe a conversão do String para Date;
-
             CalculadoraGravidez calculadora = new CalculadoraGravidez(dataUltimoPeriodoMenstrual); // Constructor recebe o Date;
-
             Date dataEstimadaConcepcao = calculadora.calcularDataEstimadaConcepcao(); // Variável recebe o calculo estimado de Concepção;
-            System.out.println("Data estimada da concepção: "
-                    + this.formatarData(dataEstimadaConcepcao));
+
+            System.out.println("Data estimada da concepção: " + this.formatarData(dataEstimadaConcepcao));
             Date dataEstimadaParto = calculadora.calcularDataEstimadaParto(); // Variável recebe o cálculo estimado de Partor;
-            System.out.println("Data estimada para parto: "
-                    + this.formatarData(dataEstimadaParto));
+            System.out.println("Data estimada para parto: " + this.formatarData(dataEstimadaParto));
         } catch (ParseException pe) {
             System.out.println("Informe uma data no padrão dd/mm/aaaa.");
         }
