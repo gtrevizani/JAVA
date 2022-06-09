@@ -10,7 +10,9 @@ public class TesteMapHashMap {
         Aluno a3 = new Aluno("José");
         Aluno a4 = new Aluno("Pedro");
 
-        Map<String, Aluno> alunos = new HashMap<>(); // Usado quando quiser manipular a ordem de cada inserção.
+            Map<String, Aluno> alunos = new HashMap<>(); // Usado quando quiser manipular a ordem de cada inserção. Recebe chave e valor. É como se fosse um vetor dentro de um vetor.
+
+        // Put funciona no HashMap
 
         alunos.put("1", a1);
         alunos.put("2", a2);

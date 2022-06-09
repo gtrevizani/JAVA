@@ -13,6 +13,8 @@ public class TesteListArrayList {
 
         List<Aluno> alunos = new ArrayList<>(); // Usado quando quiser exibir na ordem de adição.
 
+        // Add funciona no ArrayList
+
         alunos.add(a1);
         alunos.add(a2);
         alunos.add(a3);
