@@ -27,11 +27,29 @@ public class Governo {
     public BigDecimal calcularGastosComSalario(String partidoPolitico) {
         // implementar busca de políticos para o partido informado
         // e cálculo dos salários
+        BigDecimal gastoComSalario = new BigDecimal(0);
+        List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
+        if(politicos != null){
+            for (Politico p1 : politicos){
+                gastoComSalario = gastoComSalario.add(p1.getCargo().getSalario());
+            }
+        }
+        return gastoComSalario;
 
     }
     public BigDecimal calcularGastosComSalarioParaCargo(Cargo cargo, String partidoPolitico) {
         // implementar busca dos políticos para o partido e cargo informados
         // e cálculo dos salários
+        BigDecimal gastoComSalarioDeCargo = new BigDecimal(0);
+        List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
+        if(politicos != null){
+            for(Politico p2 : politicos){
+                if(p2.getCargo() == cargo){
+                    gastoComSalarioDeCargo = gastoComSalarioDeCargo.add(p2.getCargo().getSalario());
+                }
+            }
+        }
+        return gastoComSalarioDeCargo;
 
     }
 }
