@@ -15,7 +15,7 @@ public class DeserializandoObjeto {
             System.out.println("Idade: " + p.getIdade());
             System.out.println("Profissão: " + p.getProfissao());
         } catch (IOException e){
-            throw new RuntimeException()
+            throw new RuntimeException();
         } catch (ClassNotFoundException e){
             System.out.println("Erro convertendo para a classe Pessoa");
             e.printStackTrace();
