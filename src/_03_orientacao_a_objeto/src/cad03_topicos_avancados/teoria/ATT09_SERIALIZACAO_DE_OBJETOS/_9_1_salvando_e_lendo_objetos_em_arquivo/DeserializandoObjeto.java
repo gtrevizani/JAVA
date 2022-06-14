@@ -1,6 +1,6 @@
 package cad03_topicos_avancados.teoria.ATT09_SERIALIZACAO_DE_OBJETOS._9_1_salvando_e_lendo_objetos_em_arquivo;
 
-import cad03_topicos_avancados.teoria.ATT09_SERIALIZACAO_DE_OBJETOS._9_1_salvando_e_lendo_objetos_em_arquivo.model.Pessoa;
+import cad03_topicos_avancados.teoria.ATT09_SERIALIZACAO_DE_OBJETOS._9_1_salvando_e_lendo_objetos_em_arquivo.modelo.Pessoa;
 
 import java.io.FileInputStream;
 import java.io.IOException;

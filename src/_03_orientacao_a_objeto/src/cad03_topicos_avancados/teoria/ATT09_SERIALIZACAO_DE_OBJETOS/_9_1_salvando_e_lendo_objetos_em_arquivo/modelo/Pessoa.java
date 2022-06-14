@@ -1,4 +1,4 @@
-package cad03_topicos_avancados.teoria.ATT09_SERIALIZACAO_DE_OBJETOS._9_1_salvando_e_lendo_objetos_em_arquivo.model;
+package cad03_topicos_avancados.teoria.ATT09_SERIALIZACAO_DE_OBJETOS._9_1_salvando_e_lendo_objetos_em_arquivo.modelo;
 
 import java.io.Serializable;
 
