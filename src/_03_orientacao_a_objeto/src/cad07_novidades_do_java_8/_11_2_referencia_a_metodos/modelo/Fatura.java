@@ -1,22 +1,13 @@
-package cad07_novidades_do_java_8._11_1_introducao_ao_lambda.modelo;
+package cad07_novidades_do_java_8._11_2_referencia_a_metodos.modelo;
 
 public class Fatura {
 
     private String emailDevedor;
-    private  double valor;
-    private boolean emailEnviado;
+    private double valor;
 
     public Fatura(String emailDevedor, double valor) {
         this.emailDevedor = emailDevedor;
         this.valor = valor;
-    }
-
-    public String resumo(){
-        return "Valor devido: " + valor;
-    }
-
-    public boolean ifEmailEnviado(){
-        return emailEnviado;
     }
 
     public String getEmailDevedor() {
@@ -35,11 +26,11 @@ public class Fatura {
         this.valor = valor;
     }
 
-    public boolean isEmailEnviado() {
-        return emailEnviado;
+    public String resumo(){
+        return "Valor devido: " + valor;
     }
 
-    public void setEmailEnviado(boolean emailEnviado) {
-        this.emailEnviado = emailEnviado;
+    public void atualizarStatus(){
+        System.out.println("Atualizando status da fatura de valor R$ " + valor);
     }
 }
